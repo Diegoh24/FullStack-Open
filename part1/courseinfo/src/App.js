@@ -5,9 +5,11 @@ const Header = ({course}) => {
 }
 
 const Content = ({parts}) => {
+  nextId = () => Math.random() * 10000000;
+
   return (
-    parts.map((lesson, id) => 
-     <p key={id}>{lesson.name} {lesson.exercises}</p>
+    parts.map((lesson, ) => 
+     <p key={nextId()}>{lesson.name} {lesson.exercises}</p>
     )
   );
 };
