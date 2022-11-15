@@ -1,0 +1,101 @@
+{
+  "notes": [
+    {
+      "content": "custom-hooks are great",
+      "id": 1
+    },
+    {
+      "content": "the best featrure ever <3",
+      "id": 2
+    },
+    {
+      "content": "dsad",
+      "id": 3
+    },
+    {
+      "content": "omg",
+      "id": 4
+    },
+    {
+      "content": "das",
+      "id": 5
+    },
+    {
+      "content": "dasd2",
+      "id": 6
+    },
+    {
+      "content": "dsad",
+      "id": 7
+    },
+    {
+      "content": "dsad",
+      "id": 8
+    },
+    {
+      "content": "ds",
+      "id": 9
+    },
+    {
+      "content": "dsa",
+      "id": 10
+    }
+  ],
+  "persons": [
+    {
+      "name": "mluukkai",
+      "number": "040-5483923",
+      "id": 1
+    },
+    {
+      "name": "kaltsoon",
+      "number": "045-2323456",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "me",
+      "number": "909090"
+    },
+    {
+      "name": "dsa",
+      "number": "dsa",
+      "id": 4
+    },
+    {
+      "name": "dsa",
+      "number": "dsaada",
+      "id": 5
+    },
+    {
+      "name": "new person",
+      "number": "929292",
+      "id": 6
+    },
+    {
+      "name": "bote3123",
+      "number": "219390123",
+      "id": 7
+    },
+    {
+      "name": "new",
+      "number": "92130921",
+      "id": 8
+    },
+    {
+      "name": "das",
+      "number": "ds21321",
+      "id": 9
+    },
+    {
+      "name": "221",
+      "number": "dasds",
+      "id": 10
+    },
+    {
+      "name": "new person99",
+      "number": "92013214",
+      "id": 11
+    }
+  ]
+}
