@@ -1,7 +1,12 @@
+const { response } = require('express');
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.json());
+app.use(morgan('tiny'));
 
 let persons = [
   { 
@@ -50,15 +55,24 @@ app.get("/info", (req, res) => {
 
 app.post("/api/persons", (req, res) => {
   let {name, number} = req.body;
-  if (name.trim.length < 1 || number.trim.length < 1) {
-    res.send(422);
-  } else if (persons.find(person => person.number === numebr)) {
-    res.send(422);
+
+  if (name.trim().length < 1 || number.trim().length < 1) {
+    res.sendStatus(422);
+  } else if (persons.some(person => person.name === name)) {
+    res.sendStatus(422);
   } else {
     let person = {...req.body, id: getRandom()};
     persons.push(person);
-    res.sendStatus(201);
+    res.status(201).json(person);
   }
+})
+
+app.put("/api/persons/:id", (req, res) => {
+  let newData = req.body;
+  let person = persons.find(person => person.id === +req.params.id);
+  console.log(person, persons, req.params.id);
+  person.number = newData.number;
+  res.status(201).json(person);
 })
 
 app.delete("/api/persons/:id", (req, res) => {
@@ -66,6 +80,7 @@ app.delete("/api/persons/:id", (req, res) => {
   res.sendStatus(200);
 })
 
+app.use((req, res) => res.redirect('/info'));
 
 const PORT = 3001;
 app.listen(PORT, () => console.log("listening on PORT"), PORT)
