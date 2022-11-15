@@ -1,0 +1,25 @@
+### add a person
+POST http://localhost:3001/persons
+Content-Type: application/json
+
+{
+  "name": "test",
+  "number": "1232214212"
+}
+
+### get person
+GET http://localhost:3001/persons/7
+
+
+
+### delete a person
+DELETE http://localhost:3001/persons/6
+
+### update person
+PUT http://localhost:3001/persons/1
+Content-Type: application/json
+
+{
+  "name": "omg",
+  "number": "21421421"
+}
