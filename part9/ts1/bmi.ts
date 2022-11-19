@@ -13,8 +13,6 @@ const bmiClass = (bmi : number) : string => {
     return "Bulk szn gone raw";
   else if (bmi > 50)
     return "tuff || khaliMuscle";
-  else 
-    return '...';
 }
 
 const calculateBmi = (height: number, weight: number) : string => {
@@ -27,5 +25,3 @@ let height : number = Number(process.argv[2]);
 let weight : number = Number(process.argv[3]);
 
 console.log(calculateBmi(height, weight));
-
-export default calculateBmi;

@@ -1,0 +1,8 @@
+### exercise calculator
+POST http://localhost:3003/exerciseCalculator
+Content-Type: application/json
+
+{
+  "target": "dsa",
+  "dailyHours": [1, 3, 4, 6, 0, 2]
+}

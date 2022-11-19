@@ -17,7 +17,7 @@ the number of exercise hours for each day in the training period
 
 */
 
-interface Stats {
+interface stats {
   periodLength: number,
   trainingDays: number,
   success: boolean,
@@ -45,11 +45,10 @@ const getDesc = (rating : number) : string => {
     return "bum";
 }
 
-const exerciseCalculator = (dailyHours: Array<number>, target: number) : Stats => {
-  console.log(target, dailyHours, typeof dailyHours);
+const calculator = (dailyHours : Array<number>, target: number) => {
   let periodLength = dailyHours.length;
   let trainingDays = dailyHours.filter(dayHours => dayHours).length;
-  let totalHours = dailyHours.reduce((total : number, hours : number) => total + hours, 0);
+  let totalHours = dailyHours.reduce((total : number, hours : number) => total + hours);
   let average = totalHours / periodLength;
   let success = average >= target;
 
@@ -61,10 +60,8 @@ const exerciseCalculator = (dailyHours: Array<number>, target: number) : Stats =
           target, average};
 }
 
-// let target : number = Number(process.argv[2])
-// let daily : Array<number> = process.argv.slice(3).map(num => +num);
+let target : number = Number(process.argv[2])
+let daily : Array<number> = process.argv.slice(3).map(num => +num);
 
-// console.log(exerciseCalculator(daily, target));
-// process.env
-
-export default exerciseCalculator;
+console.log(calculator(daily, target));
+process.env
